@@ -5,6 +5,8 @@
 package prueba2.manager.logic;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -27,15 +29,15 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "turn", catalog = "managerdb", schema = "", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"id"})})
+        @UniqueConstraint(columnNames = { "id" }) })
 @NamedQueries({
-    @NamedQuery(name = "Turn.findAll", query = "SELECT t FROM Turn t"),
-    @NamedQuery(name = "Turn.findById", query = "SELECT t FROM Turn t WHERE t.id = :id"),
-    @NamedQuery(name = "Turn.findByNumber", query = "SELECT t FROM Turn t WHERE t.number = :number"),
-    @NamedQuery(name = "Turn.findByDate", query = "SELECT t FROM Turn t WHERE t.date = :date"),
-    @NamedQuery(name = "Turn.findByDescription", query = "SELECT t FROM Turn t WHERE t.description = :description"),
-    @NamedQuery(name = "Turn.findByDone", query = "SELECT t FROM Turn t WHERE t.done = :done"),
-    @NamedQuery(name = "Turn.findByPersonId", query = "SELECT t FROM Turn t WHERE t.personId = :personId")})
+        @NamedQuery(name = "Turn.findAll", query = "SELECT t FROM Turn t"),
+        @NamedQuery(name = "Turn.findById", query = "SELECT t FROM Turn t WHERE t.id = :id"),
+        @NamedQuery(name = "Turn.findByNumber", query = "SELECT t FROM Turn t WHERE t.number = :number"),
+        @NamedQuery(name = "Turn.findByDate", query = "SELECT t FROM Turn t WHERE t.onDate = :onDate"),
+        @NamedQuery(name = "Turn.findByDescription", query = "SELECT t FROM Turn t WHERE t.description = :description"),
+        @NamedQuery(name = "Turn.findByDone", query = "SELECT t FROM Turn t WHERE t.done = :done"),
+        @NamedQuery(name = "Turn.findByPersonId", query = "SELECT t FROM Turn t WHERE t.personId = :personId") })
 public class Turn implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -50,8 +52,8 @@ public class Turn implements Serializable {
     private long number;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "date", nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "onDate", nullable = false)
+    @Temporal(TemporalType.DATE)
     private Date onDate;
     @Basic(optional = false)
     @NotNull
@@ -70,14 +72,9 @@ public class Turn implements Serializable {
     public Turn() {
     }
 
-    public Turn(Integer id) {
-        this.id = id;
-    }
-
-    public Turn(Integer id, long number, Date date, String description, boolean done, int personId) {
-        this.id = id;
+    public Turn(Integer id, long number, Date onDate, String description, boolean done, int personId) {
         this.number = number;
-        this.onDate = date;
+        this.onDate = onDate;
         this.description = description;
         this.done = done;
         this.personId = personId;
@@ -140,7 +137,6 @@ public class Turn implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Turn)) {
             return false;
         }
@@ -152,5 +148,5 @@ public class Turn implements Serializable {
     public String toString() {
         return "prueba2.manager.logic.Turn[ id=" + id + " ]";
     }
-    
+
 }
