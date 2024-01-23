@@ -1,0 +1,16 @@
+prueba2\manager\logic\Turn_.class
+prueba2\manager\resources\JakartaEE8Resource.class
+prueba2\manager\logic\Person_.class
+prueba2\manager\service\PersonFacadeREST.class
+prueba2\manager\servlet\turnSv.class
+prueba2\manager\persistence\exceptions\IllegalOrphanException.class
+prueba2\manager\manager.class
+prueba2\manager\service\AbstractFacade.class
+prueba2\manager\service\TurnFacadeREST.class
+prueba2\manager\JakartaRestConfiguration.class
+prueba2\manager\logic\Person.class
+prueba2\manager\logic\Turn.class
+prueba2\manager\persistence\exceptions\NonexistentEntityException.class
+prueba2\manager\persistence\PersonJpaController.class
+prueba2\manager\persistence\exceptions\PreexistingEntityException.class
+prueba2\manager\persistence\TurnJpaController.class
