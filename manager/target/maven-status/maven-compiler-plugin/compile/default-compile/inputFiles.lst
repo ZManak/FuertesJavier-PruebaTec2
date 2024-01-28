@@ -1,0 +1,16 @@
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\persistence\PersonJpaController.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\org\netbeans\rest\application\config\ApplicationConfig.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\service\PersonFacadeREST.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\persistence\exceptions\PreexistingEntityException.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\service\AbstractFacade.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\logic\Person.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\persistence\exceptions\NonexistentEntityException.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\resources\JakartaEE8Resource.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\servlet\personSv.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\persistence\exceptions\IllegalOrphanException.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\servlet\menu.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\servlet\turnSv.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\persistence\TurnJpaController.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\logic\Turn.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\service\TurnFacadeREST.java
+C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\src\main\java\prueba2\manager\manager.java

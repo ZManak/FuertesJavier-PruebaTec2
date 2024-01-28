@@ -72,7 +72,7 @@ public class Turn implements Serializable {
     public Turn() {
     }
 
-    public Turn(Integer id, long number, Date onDate, String description, boolean done, int personId) {
+    public Turn(long number, Date onDate, String description, boolean done, int personId) {
         this.number = number;
         this.onDate = onDate;
         this.description = description;

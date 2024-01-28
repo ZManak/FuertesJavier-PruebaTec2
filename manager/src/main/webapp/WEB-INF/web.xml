@@ -4,9 +4,25 @@
         <servlet-name>turnSv</servlet-name>
         <servlet-class>prueba2.manager.servlet.turnSv</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>personSv</servlet-name>
+        <servlet-class>prueba2.manager.servlet.personSv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>menu</servlet-name>
+        <servlet-class>prueba2.manager.servlet.menu</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>turnSv</servlet-name>
         <url-pattern>/turnSv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>personSv</servlet-name>
+        <url-pattern>/personSv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

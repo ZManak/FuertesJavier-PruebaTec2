@@ -8,24 +8,12 @@
   </head>
   <body>
     <header>
-      <h1>Patient Registration</h1>
+      <h1>Turn Manager</h1>
     </header>
-
-    // This is the form that will be submitted to the server
-
-    <form action="" method="post">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" /><br />
-      <label for="age">Age:</label><br />
-      <input type="number" id="age" name="age" /><br />
-      <label for="gender">Gender:</label><br />
-      <input type="text" id="gender" name="gender" /><br />
-      <label for="contact">Contact:</label><br />
-      <input type="text" id="contact" name="contact" /><br />
-      <label for="date">Date:</label><br />
-      <input type="date" id="date" name="date" /><br />
-
-      <input type="submit" value="Register" />
-    </form>
+    <main>
+      <h2>Select</h2>
+      <a href="./personSv.jsp">Create Ticket</a>
+      <a href="./turnSv.jsp">Manage Tickets</a>
+    </main>
   </body>
 </html>
