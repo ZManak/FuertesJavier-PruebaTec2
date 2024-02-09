@@ -31,11 +31,7 @@ public class Person implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    //Generar Foreign Key
-    //https://stackoverflow.com/questions/3593593/jpa-foreign-key-annotation
-
-    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)     
     @Basic(optional = false)
     @Column(name = "id", nullable = false)
     private Integer id;

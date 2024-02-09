@@ -15,18 +15,20 @@
 
     <h2>Submit a ticket</h2>
     <p>Fill out the form below with your name and ID number*</p>
-    <form action="" method="post">
+    <form action="./personSv" method="post">
       <label for="name">Name:</label><br />
       <input type="text" id="name" name="name" /><br />
-      <label for="personId">ID Number:</label><br />
-      <input type="number" id="personId" name="personId" /><br />
+      <label for="ticketRef">Ticket Reference:</label><br />
+      <input type="text" id="ticketRef" name="ticketRef" /><br />
       <label for="description">Brief issue description:</label><br />
       <input type="text" id="description" name="description" /><br />
       <label for="date">Date of the incidence (by default today):</label><br />
       <input type="date" id="date" name="date" /><br />
 
-      <input type="submit" value="Register" />
+      <input type="submit" action="./personSv" method="post" value="Register" />
     </form>
+    // This is the script that will be executed when the form is submitted
+
 
     <p>*A new user will be created if they are not yet registered</p>
   </body>

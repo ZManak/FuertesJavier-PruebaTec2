@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="turnManager" />
+        <module name="manager" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="turnManager" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="manager" options="-endorseddirs C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\manager\target/endorsed" />
       <module name="turnManager" options="-endorseddirs C:\Users\Manak\Documents\NetBeansProjects\FuertesJavier-PruebaTec2\turnManager\target/endorsed" />
     </option>
   </component>

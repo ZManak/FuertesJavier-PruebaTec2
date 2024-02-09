@@ -5,8 +5,6 @@
 package prueba2.manager.logic;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -14,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -66,13 +66,14 @@ public class Turn implements Serializable {
     private boolean done;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "personId", nullable = false)
-    private int personId;
+    @ManyToOne
+    @JoinColumn(name = "personId", referencedColumnName = "id")
+    private Person personId;
 
     public Turn() {
     }
 
-    public Turn(long number, Date onDate, String description, boolean done, int personId) {
+    public Turn(long number, Date onDate, String description, boolean done, Person personId) {
         this.number = number;
         this.onDate = onDate;
         this.description = description;
@@ -120,11 +121,11 @@ public class Turn implements Serializable {
         this.done = done;
     }
 
-    public int getPersonId() {
+    public Person getPersonId() {
         return personId;
     }
 
-    public void setPersonId(int personId) {
+    public void setPersonId(Person personId) {
         this.personId = personId;
     }
 
