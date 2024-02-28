@@ -13,8 +13,8 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import prueba2.manager.persistence.exceptions.NonexistentEntityException;
 import prueba2.manager.logic.Turn;
+import prueba2.manager.persistence.exceptions.NonexistentEntityException;
 /**
  *
  * @author Manak
@@ -120,16 +120,16 @@ public class TurnJpaController implements Serializable {
         }
     }
 
-    public Turn findTurn(int id) {
+    public Turn findTurn(int personId) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Turn
-                    .class, id);
+                    .class, personId);
         } finally {
             em.close();
         }
     }
-
+    
     public int getTurnCount() {
         EntityManager em = getEntityManager();
         try {
@@ -138,7 +138,7 @@ public class TurnJpaController implements Serializable {
             rt = cq.from(Turn.class);
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
-            return ((Long) q.getSingleResult()).intValue();
+            return ((Number) q.getSingleResult()).intValue();
         } finally {
             em.close();
         }

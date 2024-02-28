@@ -1,3 +1,5 @@
+<%-- Servlet --%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOC TYPE html>
 <html>
@@ -11,11 +13,9 @@
       <h1>Turn Manager</h1>
     </header>
 
-    // This is the form that will be submitted to the server
-
     <h2>Submit a ticket</h2>
     <p>Fill out the form below with your name and ID number*</p>
-    <form action="./personSv.jsp" method="post">
+    <form action="personSv" method="POST">
       <label for="name">Name:</label><br />
       <input type="text" id="name" name="name" /><br />
       <label for="ticketRef">Ticket Reference:</label><br />
@@ -25,7 +25,7 @@
       <label for="date">Date of the incidence (by default today):</label><br />
       <input type="date" id="date" name="date" /><br />
 
-      <input type="submit" action="./personSv.jsp" method="post" value="Register" />
+      <input type="submit" value="Register" />
     </form>
     // This is the script that will be executed when the form is submitted
 

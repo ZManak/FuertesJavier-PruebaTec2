@@ -34,7 +34,7 @@ public class Person implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)     
     @Basic(optional = false)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private int id;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 30)
@@ -49,11 +49,11 @@ public class Person implements Serializable {
         this.name = name;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -79,10 +79,7 @@ public class Person implements Serializable {
             return false;
         }
         Person other = (Person) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return ! ((this.id != null && !this.id.equals(other.getId())) || (this.id == null && other.id != null));
     }
 
     @Override

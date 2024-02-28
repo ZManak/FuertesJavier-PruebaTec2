@@ -28,9 +28,8 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(org.eclipse.persistence.jaxb.rs.MOXyJsonProvider.class);
         resources.add(prueba2.manager.resources.JakartaEE8Resource.class);
-        resources.add(prueba2.manager.service.PersonFacadeREST.class);
-        resources.add(prueba2.manager.service.TurnFacadeREST.class);
     }
     
 }
