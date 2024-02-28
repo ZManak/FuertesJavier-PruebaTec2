@@ -25,11 +25,12 @@ public class manager {
         } catch (ParseException e) {
         }
 
-        Person person = new Person("Mike");
+        Person person = new Person("Wilson");
         perJpa.create(person);
         System.out.println("User created: " + person.getName());
         PersonService perSv = new PersonService();
         perSv.saveTicket(person, 7777, "report", sqlDate);
+        
 //        Person user01 = new Person("Mike");
 //        Turn turn01 = new Turn(number, date, "Turno de prueba", false, user01);
 //

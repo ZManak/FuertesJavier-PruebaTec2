@@ -13,8 +13,8 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import prueba2.manager.persistence.exceptions.NonexistentEntityException;
 import prueba2.manager.logic.Person;
+import prueba2.manager.persistence.exceptions.NonexistentEntityException;
 /**
  *
  * @author Manak
@@ -24,7 +24,7 @@ public class PersonJpaController implements Serializable {
     public PersonJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-     
+    
     /**
      * Default constructor of the class
      */
@@ -63,7 +63,7 @@ public class PersonJpaController implements Serializable {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
                 int id = persona.getId();
-                if (findPersona(id) == null) {
+                if (getPerso(id) == null) {
                     throw new NonexistentEntityException("The persona with id " + id + " no longer exists.");
                 }
             }
@@ -120,15 +120,15 @@ public class PersonJpaController implements Serializable {
         }
     }
 
-    public Person findPersona(int id) {
+public Person getPerso(int id) {
         EntityManager em = getEntityManager();
         try {
-            return em.find(Person
-                    .class, id);
+            return em.find(Person.class, id);
         } finally {
             em.close();
         }
     }
+    
 
     public int getPersonaCount() {
         EntityManager em = getEntityManager();
